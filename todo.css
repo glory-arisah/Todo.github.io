@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to top right, #e93030, #2d0233);
+    height: 100vh;
+    font-family: Courgette,cursive;
+}
+
+figure {
+    height: 100px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 80px auto;
+    height: 650px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: white;
+    
+}
+.container figure img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 400px;
+    height: 180px;
+}
+.container figure figcaption {
+    font-weight: bolder;
+    font-size: 20px;
+    position: relative;
+    top: -35px;
+    left: 13px;
+    color: white;
+}
+
+.container input {
+    font-family: 'Courgette', cursive;
+    width: 300px;
+    border: none;
+    border-top: 0.5px dotted navy;
+    height: 35px;
+    border-bottom-left-radius: 10px;
+    padding-left: 8px;
+}
+.container input:focus {
+    border: none;
+}
+.bottom {
+    margin-top: auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.listItems {
+    margin-top: 95px;
+    max-height: 500px;
+}
+.listItem {
+    display: flex;
+    margin: 5px;
+    border-bottom: 1px dashed navy; 
+}
+.listItem p {
+    padding-top: 5px;
+}
+.listItem p:read-only {
+    border: none;
+}
+.listItem p:read-write {
+    border: 1px dotted #6f75ca;
+}
+.listItem input  {
+    width: 20px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+.listItem input:checked + p{
+    text-decoration: line-through;
+}
+
+.icons {
+    display: flex;
+    width: 95px;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.delete, .edit {
+    height: 30px;
+    width: 30px;
+}
+.edit:hover {
+    border-radius: 20px;
+    background-color: green;
+    cursor: pointer;
+}
+
+.delete:hover {
+    background-color: red;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.svg-icon {
+    width: 50px;
+    height: 40px;
+}
+    
+  .svg-icon polygon,
+  .svg-icon rect {
+      stroke: white;
+}
+ 
+ .svg-icon path:hover {
+     fill: rgb(37, 21, 131);
+     stroke: white;
+     stroke-width: 5px;
+     cursor: pointer;
+}
+ 
