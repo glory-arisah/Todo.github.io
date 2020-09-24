@@ -44,7 +44,6 @@ figure {
     width: 300px;
     border-top: 0.5px dotted navy;
     height: 35px;
-    border-bottom-left-radius: 10px;
     padding-left: 8px;
 }
 .container input:focus {
