@@ -4,17 +4,8 @@ const currentDate = document.querySelector("[data-date]");
 const userInput = document.querySelector("#userInput");
 const addButton = document.querySelector(".svg-icon")
 
-addButton.addEventListener('click', () => {
-    if (userInput.value != "") {
-        createItem();
-        clear();
-    }
-    else {
-      prompt("You have not entered a to-do item");
-    }
-})
 
-function createItem() {
+function createItem(pTagNode) {
     let newItem = document.createElement("div");
     newItem.classList.add("listItem");
     let check = document.createElement("input");
@@ -29,10 +20,10 @@ function createItem() {
     let del = document.createElement("img");
     del.src = "https://img.icons8.com/cotton/64/000000/delete-sign--v2.png";
     del.classList.add("delete");
-    pTagNode = document.createTextNode(userInput.value);
+    let pTagNodeElement = document.createTextNode(pTagNode)
     icons.appendChild(edit);
     icons.appendChild(del);
-    pTag.appendChild(pTagNode);
+    pTag.appendChild(pTagNodeElement);
     newItem.appendChild(check);
     newItem.appendChild(pTag);
     newItem.appendChild(icons);
@@ -83,3 +74,16 @@ function _currentTime() {
 }
 
 setInterval(_currentTime, 1000);
+
+
+addButton.addEventListener('click', () => {
+    if (userInput.value) {
+        createItem(userInput.value);
+        clear();
+    }
+    else {
+      let noTodo = prompt("You have not entered a to-do item");
+      createItem(noTodo);
+      console.log(noTodo);
+    }
+})
