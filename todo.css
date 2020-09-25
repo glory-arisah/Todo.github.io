@@ -42,7 +42,6 @@ figure {
 .container input {
     font-family: 'Courgette', cursive;
     width: 300px;
-    border-top: 0.5px dotted navy;
     height: 35px;
     padding-left: 8px;
 }
